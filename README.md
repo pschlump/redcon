@@ -8,6 +8,10 @@
 
 <p align="center">Redis compatible server framework for Go</p>
 
+Modifications from original.
+--------
+- Modify the parsing process to be [faster](#fasterparsing).
+
 Features
 --------
 - Create a [Fast](#benchmarks) custom Redis compatible server in Go

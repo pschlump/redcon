@@ -1,15 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
-	"github.com/tidwall/redcon"
+	"github.com/pschlump/redcon"
 )
 
 var addr = ":6380"
 
 func main() {
-	log.Printf("started server at %s", addr)
 
 	handler := NewHandler()
 
@@ -20,6 +20,8 @@ func main() {
 	mux.HandleFunc("set", handler.set)
 	mux.HandleFunc("get", handler.get)
 	mux.HandleFunc("del", handler.delete)
+
+	fmt.Printf("Started server at %s\n", addr)
 
 	err := redcon.ListenAndServe(addr,
 		mux.ServeRESP,
