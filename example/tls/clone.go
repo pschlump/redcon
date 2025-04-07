@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/tidwall/redcon"
+	"github.com/pschlump/redcon"
 )
 
 const serverKey = `-----BEGIN EC PARAMETERS-----
